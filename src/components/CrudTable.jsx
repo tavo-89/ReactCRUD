@@ -3,14 +3,14 @@ import Crudtablerow from './CrudTableRow';
 /* va a importar la base de datos falsa de CrudApp (componente padre) y destructuro las funciones */
 const Crudtable = ({data, setDataToEdit, deleteData}) => {
     return (
-        <div>
-            <h3>Tabla de Datos</h3>
+        <div className="tabla">
+            <h3 className="titulo">Caballeros del zodiaco</h3>
             <table>
                 <thead>
                     <tr>
                         <th>Nombre</th>
                         <th>Constelación</th>
-                        <th>Acciones</th>
+                        <th className="btn">Acciones</th>
                     </tr>
                 </thead>
                 <tbody>

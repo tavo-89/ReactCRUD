@@ -53,7 +53,18 @@ const Crudapp = () => {
             setDb(newData)
     };
 
-    const deleteData = (id) => {};
+    const deleteData = (id) => {
+        let deleteConfirm = window.confirm('¿Estás seguro?')
+
+        if (deleteConfirm) {
+            /* filtra los datos q no coincidan con el id pasado y los retorna en un nuevo array */
+            let newData = db.filter(e => e.id !== id)
+            setDb(newData)
+        }else{
+            return
+        }
+
+    };
 
 
     return (

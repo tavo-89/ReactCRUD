@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-/* inicializacion falsa del formulario */
+/* estructura del objeto */
 const initialForm = {
     name: "",
     constellation: "",
@@ -24,7 +24,7 @@ const Crudform = ({createData, updateData, dataToEdit, setDataToEdit}) => {
 
     },[dataToEdit])
 
-  /* para manejar los cambios en los imput */
+  /* para manejar los cambios en los imput text */
     const handleChange = (e) => {
       /* actualiza datos del formulario */
       setForm({
