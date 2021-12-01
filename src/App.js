@@ -7,9 +7,9 @@ function App() {
   return (
     <div>
     <h1 className="titulo">Ejercicios con React</h1>
-    <CrudApp/>
-    <hr/>
     <CrudApi/>
+    <hr/>
+    <CrudApp/>
     </div>
   );
 }

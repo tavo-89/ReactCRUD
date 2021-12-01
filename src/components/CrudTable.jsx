@@ -15,7 +15,7 @@ const Crudtable = ({data, setDataToEdit, deleteData}) => {
                 </thead>
                 <tbody>
                     {/* si no hay datos coloca "sin datos" sino devuelve la lista d todos los datos */}
-                    {data.length === 0 ? <tr><td colSpan='3'>sin datos</td></tr> : data.map(e => <Crudtablerow key={e.id} e={e} setDataToEdit={setDataToEdit} deleteData={deleteData}/>)}
+                    {data.length > 0 ? data.map(e => <Crudtablerow key={e.id} e={e} setDataToEdit={setDataToEdit} deleteData={deleteData}/>) : (<tr><td colSpan='3'>sin datos</td></tr>) }
                 </tbody>
             </table>
         </div>
