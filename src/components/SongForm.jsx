@@ -6,7 +6,9 @@ const initialForm = {
     };
 
     const Songform = ({ handleSearch }) => {
+        
     const [form, setForm] = useState(initialForm);
+
     const handleChange = (e) => {
         setForm({ ...form, [e.target.name]: e.target.value });
     };

@@ -18,28 +18,28 @@ const Songsearch = () => {
         //
         const fetchData = async () => {
         //se le asigna a search los dos atributos q tiene el objeto de la variable de estado
-        const { artist, song } = search;
-        //guardamos los dos endpoint asignandole los atributos
-        let artistUrl = `https://www.theaudiodb.com/api/v1/json/2/search.php?s=${artist}`;
-        let songUrl = `https://api.lyrics.ovh/v1/${artist}/${song}`;
-        console.log(artistUrl, songUrl)
+            const { artist, song } = search;
+            //guardamos los dos endpoint asignandole los atributos
+            let artistUrl = `https://www.theaudiodb.com/api/v1/json/2/search.php?s=${artist}`;
+            let songUrl = `https://api.lyrics.ovh/v1/${artist}/${song}`;
+            console.log(artistUrl, songUrl)
 
-        //cuando se inicia la busqueda renderiza el loading
-        setLoading(true);
+            //cuando se inicia la busqueda renderiza el loading
+            setLoading(true);
 
-        //como se neceista ambas respuestas creamos una promise.all para ejecutar ambas
-        const [artistResponse, songResponse] = await Promise.all([
-            helpHttp().get(artistUrl),
-            helpHttp().get(songUrl),
-        ]);
-        
+            //como se neceista ambas respuestas creamos una promise.all para ejecutar ambas
+            const [artistResponse, songResponse] = await Promise.all([
+                helpHttp().get(artistUrl),
+                helpHttp().get(songUrl),
+            ]);
+            
 
-        //actualizamos los dos estados
-        setBio(artistResponse);
-        setLyric(songResponse);
+            //actualizamos los dos estados
+            setBio(artistResponse);
+            setLyric(songResponse);
 
-        //se oculta el loading cuando termina de hacer la peticion
-        setLoading(false);
+            //se oculta el loading cuando termina de hacer la peticion
+            setLoading(false);
         };
         //ejecuto la peticion
         fetchData();

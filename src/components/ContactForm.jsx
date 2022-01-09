@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-import { useForm } from '../hook/useForm';
+import React from 'react';
+import { useForm } from '../hooks/useForm';
 import Loader from './Loader'
 import Message from './Message'
 
@@ -15,7 +15,7 @@ const initialForm = {
 const validationForm = (form) =>{
     let errors = {}
     let regexName = /^[a-zA-Z\sñáéíóúü]*$/
-    let regexEmail = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]:+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/
+    let regexEmail =  /^(\w+[/./-]?){1,}@[a-z]+[/.]\w{2,}$/;
     let RegexComments =  /^.{1,255}$/;
 
     /* validacion campo nombre */

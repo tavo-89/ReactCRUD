@@ -1,5 +1,5 @@
 import React from 'react';
-import { useFetch } from '../hook/useFetch';
+import { useFetch } from '../hooks/useFetch';
 import Loader from './Loader'
 import Message from './Message';
 
