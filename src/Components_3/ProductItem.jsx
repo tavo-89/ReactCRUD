@@ -12,8 +12,8 @@ const Productitem = ({data, addToCart}) => {
             <h5>$ {price}.00</h5>
             <button onClick={()=>addToCart(id)}>agregar</button>
         </div>
-    );git add .
-    
+    );
+
 }
 
 export default Productitem;

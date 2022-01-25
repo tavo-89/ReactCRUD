@@ -5,8 +5,9 @@ function CartItem({data, deleteCart}) {
     return (
         <div style={{borderBottom:'thin solid gray'}}>
             <h4>{name}</h4>
-            <h5>$ {price}.00 x {quantity}</h5>
-            <button onClick={deleteCart}>Eliminar</button>
+            <h5>$ {price}.00 x {quantity} = ${price * quantity} .00</h5>
+            <button onClick={()=>deleteCart(id)}>Eliminar uno</button>
+            <button onClick={()=>deleteCart(id, true)}>Eliminar todos</button>
         </div>
     )
 }
