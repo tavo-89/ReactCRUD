@@ -1,7 +1,9 @@
-import React from "react";
+import React, {useContext} from 'react';
+import CrudContext from '../Context/CrudContext';
 
-const Crudtablerow = ({e, setDataToEdit, deleteData}) => {
+const Crudtablerowc = ({e}) => {
 
+    const {setDataToEdit, deleteData} = useContext(CrudContext);
     return (
         <tr>
         <td>{e.name}</td>
@@ -12,6 +14,6 @@ const Crudtablerow = ({e, setDataToEdit, deleteData}) => {
         </td>
         </tr>
     );
-};
+}
 
-export default Crudtablerow;
+export default Crudtablerowc;
